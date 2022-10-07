@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 1em 0;
+}
+
+h1 {
+    background-image: url(https://2017.europe.wordcamp.org/files/2017/01/background-pattern-01.png);
+    background-color: #f4ebe0;
+    height: 110px;
+    text-align: center;
+    color: #404040;
+}
+
+header {
+    padding: 2em;
+    background: #272427;
+    text-align: center;
+}
+
+header>h2 {
+    color: #c79a68;
+    padding-bottom: 0;
+    text-transform: uppercase;
+}
+
+header>p {
+    color: #989da3;
+    padding-bottom: 50px;
+}
+
+img {
+	width: 180px;
+    margin: 0 auto;
+}
+
+main>ul {
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+}
+
+li {
+    background-color: #ffffff;
+    color: #404040;
+    border-bottom: 1px #404040 dotted;
+    width: 100%;
+    padding-bottom: 25px;
+    list-style: none;
+}
+
+li.last {
+    border: none;
+}
+
+li>h2 {
+padding-bottom: 10px;
+margin:0;
+}
+
+li>p {
+    padding-top: 5px;
+}
+
+footer {
+    border: none;
+    padding: 20px;
+    color: white;
+    background: #262427;
+}   
+
+aside {
+    background: #262427;
+    border: none;
+}
+
+.info li {
+    padding: 1.8em;
+    text-align: center;
+    font-size: 1.5em
+}
+
+.accessibility {
+    background: #efe4d6; 
+    color: #343133; 
+}
+
+.code {
+    background: #e7ab46;
+    color: white;
+}
+
+.contact {
+    background: #68470d;
+    color: white;
+}
+
+.faq {
+    background: #cc9966;
+    color: white;
+}
+
+@media (min-width: 800px) {
+      
+        .grid {
+            display: grid;
+		    grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr 3fr;
+            grid-template-areas:
+            "content-head content-head"
+            "main header"
+            "main sidebar"
+            "footer footer";
+        }
+
+        .title {
+            grid-area: header;
+        }
+
+        .title {
+            grid-area: content-head;
+          }
+          
+        .content {
+            grid-area: main;
+          }
+          
+        .aside {
+            grid-area: sidebar;
+          }
+              
+        .footer {
+            grid-area: footer;
+          }
+          
+    }
+
+    @media (min-width: 1000px) {
+        
+        .grid {
+            grid-auto-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto 1fr 3fr;
+            grid-template-areas:
+            "content-head content-head content-head content-head"
+            "main main header header "
+            "main main sidebar footer";
+            }
+
+        /* .image {
+            width: 100%;
+            display: inline-block;
+        } */
+
+
+      }
